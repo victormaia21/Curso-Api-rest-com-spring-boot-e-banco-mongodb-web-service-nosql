@@ -1,10 +1,10 @@
 package com.victor.workshopmongo.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -23,7 +23,7 @@ public class Post implements Serializable {
 	private String body;
 	private AuthorDto author;
 	
-	private Set<CommentDto>comments = new HashSet<>();
+	private List<CommentDto>comments = new ArrayList<>();
 	
 	public Post() {
 	}
@@ -81,7 +81,7 @@ public class Post implements Serializable {
 	
 	
 
-	public Set<CommentDto> getComments() {
+	public List<CommentDto> getComments() {
 		return comments;
 	}
 

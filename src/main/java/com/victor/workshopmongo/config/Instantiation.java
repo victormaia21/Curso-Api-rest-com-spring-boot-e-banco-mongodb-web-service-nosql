@@ -28,6 +28,7 @@ public class Instantiation implements CommandLineRunner{
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
+		
 		repuse.deleteAll();
 		reppost.deleteAll();
 		
@@ -37,8 +38,8 @@ public class Instantiation implements CommandLineRunner{
 		
 		repuse.saveAll(Arrays.asList(maria,alex,bob));
 		
-		Post p1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para são paulo,abraços",new AuthorDto(maria));
-		Post p2 = new Post(null, sdf.parse("21/03/2018"), "boa dia", "Vou viajar para o acre,abraços",new AuthorDto(maria));
+		Post p1 = new Post(null, sdf.parse("21/03/2019"), "partiu viagem", "Vou viajar para são paulo,abraços",new AuthorDto(maria));
+		Post p2 = new Post(null, sdf.parse("23/03/2018"), "boa dia", "Vou viajar para o acre,abraços",new AuthorDto(maria));
 		
 		
 		CommentDto c1 = new CommentDto("Tenha um otimo dia", sdf.parse("31/03/2020"), new AuthorDto(alex));

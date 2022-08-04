@@ -1,7 +1,6 @@
 package com.victor.workshopmongo.resources;
 
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,7 +61,7 @@ public class UserResources {
 	}
 		
 	@GetMapping(value = "/{id}/posts")
-	public ResponseEntity<Set<Post>>findpost(@PathVariable String id) {
+	public ResponseEntity<List<Post>> findpost(@PathVariable String id) {
 		User u = service.findbyid(id);
 		return ResponseEntity.ok().body(u.getPosts());
 	}
